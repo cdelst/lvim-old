@@ -26,6 +26,7 @@ ikeymap("<C-o>c", "<C-k>Co")
 ikeymap("<C-o>ok", "<C-k>OK")
 ikeymap("<C-o>r", "🚀")
 
+-- Hop keymaps
 local hop_ok, hop = pcall(require, 'hop')
 if hop_ok then
   local directions = require('hop.hint').HintDirection
@@ -55,3 +56,4 @@ if hop_ok then
     hop.hint_char2({ direction = directions.BEFORE_CURSOR })
   end, opts)
 end
+
