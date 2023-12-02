@@ -18,7 +18,7 @@ lvim.lsp.on_attach_callback = function(client, bufnr)
 end
 
 
--- Typescript config using typescript.nvim
+-- -- Typescript config using typescript.nvim
 ts.setup({
   server = {
     root_dir = require('lspconfig.util').root_pattern('.git'),
@@ -27,7 +27,7 @@ ts.setup({
   },
 })
 
--- -- Keeping this here for reference
+-- Keeping this here for reference
 -- require("lvim.lsp.manager").setup("tsserver", {
 --   root_dir = require('lspconfig.util').root_pattern('.git'),
 --   on_attach = common_on_attach,
