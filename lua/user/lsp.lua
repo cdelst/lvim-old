@@ -1,7 +1,7 @@
 local lvim_lsp = require('lvim.lsp')
 local ts = require('typescript')
 
-configure tsserver server manually.
+-- configure tsserver server manually.
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "tsserver" })
 
 local common_on_attach = lvim_lsp.common_on_attach
@@ -18,7 +18,7 @@ lvim.lsp.on_attach_callback = function(client, bufnr)
 end
 
 
-Typescript config using typescript.nvim
+-- Typescript config using typescript.nvim
 ts.setup({
   server = {
     root_dir = require('lspconfig.util').root_pattern('.git'),
@@ -78,7 +78,7 @@ lspconfig.eslint.setup {
     }
   },
   root_dir = lspconfig_util.find_git_ancestor
-} 
+}
 
 lvim.lsp.diagnostics.float.max_width = 120
 lvim.lsp.diagnostics.float.focusable = true
